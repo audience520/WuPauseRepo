@@ -42,6 +42,4 @@ Windows 7 / 8.1
   https://support.microsoft.com/ 或直接搜「.NET Framework 4.8 下载」
   
 ❌ 无 .NET Framework 4.8
-许可
-MIT License
 仅供个人技术研究使用。请勿用于违反 Windows 许可协议或绕过安全更新的用途。
