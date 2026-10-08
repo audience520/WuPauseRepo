@@ -1,0 +1,8 @@
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\_verify\WuPause.exe.config
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\_verify\WuPause.exe
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\src\obj\Release\WuPause.csproj.AssemblyReference.cache
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\src\obj\Release\WuPause.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\src\obj\Release\WuPause.AssemblyInfoInputs.cache
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\src\obj\Release\WuPause.AssemblyInfo.cs
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\src\obj\Release\WuPause.csproj.CoreCompileInputs.cache
+C:\Users\sowayjs26\Desktop\【暂停更新系统】WindowsUpdatePause1.0.0.0\WuPauseRepo\src\obj\Release\WuPause.exe

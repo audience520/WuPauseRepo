@@ -1,0 +1,57 @@
+Windows 更新暂停工具 (WuPause)
+================================
+
+【怎么用】
+  双击 WuPause.exe
+  会弹出「用户账户控制」窗口，点「是」—— 这是正常的，程序需要管理员权限
+  然后就看到界面了，不会闪退
+
+  1. 在「暂停天数」框里填天数（默认 365）
+  2. 点「设为暂停」
+  3. 点「刷新状态」可以随时查看当前情况
+  4. 点「取消暂停」恢复更新
+
+【依赖】
+  只需要 .NET Framework 4.8
+  Windows 10 1607 以上、Windows 11 全部自带，不用装任何东西
+  支持 32 位和 64 位
+
+
+【为什么原来的软件不管用】
+
+  原软件只写了一个注册表值 FlightSettingsMaxPauseDays（下拉框最大可选天数），
+  但没有写暂停时间和暂停状态，所以系统从来不知道「从什么时候暂停到什么时候」，
+  永远进不了暂停态。
+
+  暂停态需要三组键同时存在：
+
+  1) HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
+     FlightSettingsMaxPauseDays                DWORD
+
+  2) HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
+     PauseUpdatesStartTime / PauseUpdatesExpiryTime
+     PauseFeatureUpdatesStartTime / PauseFeatureUpdatesEndTime
+     PauseQualityUpdatesStartTime / PauseQualityUpdatesEndTime
+     格式：yyyy-MM-ddTHH:mm:ssZ  （UTC时间，结尾的 Z 就是这个意思）
+
+  3) HKLM\SOFTWARE\Microsoft\WindowsUpdate\UpdatePolicy\Settings
+     PausedFeatureStatus = 1
+     PausedQualityStatus = 1
+
+  还有一个隐藏约束：第 2 组的时间跨度不能超过第 1 组的值，
+  否则第 2、3 组会被系统忽略。
+  所以只把上限改成 3650 天、却不写时间戳，依然是无效的。
+
+
+【注意】
+  • 这仍然是「暂停」，不是「禁用」。到期后更新会正常恢复。
+  • 累积更新 / 功能升级有可能重置这些值，需要重新执行一次。
+  • 暂停期间不会安装安全补丁，别长期开着不管。
+  • 每次点「设为暂停」都会先在同目录 WuPause_Backup 文件夹里自动备份，
+    双击备份文件就能恢复到修改前的状态。
+
+
+【如果还闪退】
+  说明系统缺少 .NET Framework 4.8。
+  到微软官网下载「启用 .NET Framework 4.8」安装后即可：
+  https://support.microsoft.com/ 或直接搜「.NET Framework 4.8 下载」
