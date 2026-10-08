@@ -35,10 +35,12 @@ Windows 11（含 25H2）
 32 位 / 64 位
 ✅
 Windows 7 / 8.1
+
 【如果还闪退】
   说明系统缺少 .NET Framework 4.8。
   到微软官网下载「启用 .NET Framework 4.8」安装后即可：
   https://support.microsoft.com/ 或直接搜「.NET Framework 4.8 下载」
+  
 ❌ 无 .NET Framework 4.8
 许可
 MIT License
