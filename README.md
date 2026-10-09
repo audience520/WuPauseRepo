@@ -1,5 +1,5 @@
 Windows Update Pause Tool
-暂停 Windows 10 / 11 的自动更新，可自定义天数（最长 36500 天 ≈ 100 年）。
+暂停 Windows 10 / 11 的自动更新，可自定义天数无限制
 单文件 20.5 KB，双击即用，无需安装任何依赖。
 platform
 size
